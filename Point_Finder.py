@@ -1,0 +1,115 @@
+# Made by WaterPeach69565 5/29/2022
+from tkinter import *
+from tkinter import messagebox
+import pyautogui
+
+root = Tk()
+root.geometry("1000x1000")
+root.title("Point Finder")
+
+
+# this creates the grid
+def grid(self):
+    canvas = Canvas(root, width=1000, height=1000)
+    # horizontal lines
+    canvas.create_line(1000, 0, 0, 0)
+    canvas.create_line(1000, 25, 0, 25)
+    canvas.create_line(1000, 50, 0, 50)
+    canvas.create_line(1000, 75, 0, 75)
+    canvas.create_line(1000, 100, 0, 100)
+    canvas.create_line(1000, 125, 0, 125)
+    canvas.create_line(1000, 150, 0, 150)
+    canvas.create_line(1000, 175, 0, 175)
+    canvas.create_line(1000, 200, 0, 200)
+    canvas.create_line(1000, 225, 0, 225)
+    canvas.create_line(1000, 250, 0, 250)
+    canvas.create_line(1000, 275, 0, 275)
+    canvas.create_line(1000, 300, 0, 300)
+    canvas.create_line(1000, 325, 0, 325)
+    canvas.create_line(1000, 350, 0, 350)
+    canvas.create_line(1000, 375, 0, 375)
+    canvas.create_line(1000, 400, 0, 400)
+    canvas.create_line(1000, 425, 0, 425)
+    canvas.create_line(1000, 450, 0, 450)
+    canvas.create_line(1000, 475, 0, 475)
+    canvas.create_line(1000, 500, 0, 500)
+    canvas.create_line(1000, 525, 0, 525)
+    canvas.create_line(1000, 550, 0, 550)
+    canvas.create_line(1000, 575, 0, 575)
+    canvas.create_line(1000, 600, 0, 600)
+    canvas.create_line(1000, 625, 0, 625)
+    canvas.create_line(1000, 650, 0, 650)
+    canvas.create_line(1000, 675, 0, 675)
+    canvas.create_line(1000, 700, 0, 700)
+    canvas.create_line(1000, 725, 0, 725)
+    canvas.create_line(1000, 750, 0, 750)
+    canvas.create_line(1000, 775, 0, 775)
+    canvas.create_line(1000, 800, 0, 800)
+    canvas.create_line(1000, 825, 0, 825)
+    canvas.create_line(1000, 850, 0, 850)
+    canvas.create_line(1000, 875, 0, 875)
+    canvas.create_line(1000, 900, 0, 900)
+    canvas.create_line(1000, 925, 0, 925)
+    canvas.create_line(1000, 950, 0, 950)
+    canvas.create_line(1000, 975, 0, 975)
+    canvas.create_line(1000, 1000, 0, 1000)
+    # vertical lines
+
+    canvas.create_line(25, 0, 25, 1000)
+    canvas.create_line(50, 0, 50, 1000)
+    canvas.create_line(75, 0, 75, 1000)
+    canvas.create_line(100, 0, 100, 1000)
+    canvas.create_line(125, 0, 125, 1000)
+    canvas.create_line(100, 0, 100, 1000)
+    canvas.create_line(125, 0, 125, 1000)
+    canvas.create_line(150, 0, 150, 1000)
+    canvas.create_line(175, 0, 175, 1000)
+    canvas.create_line(200, 0, 200, 1000)
+    canvas.create_line(225, 0, 225, 1000)
+    canvas.create_line(250, 0, 250, 1000)
+    canvas.create_line(275, 0, 275, 1000)
+    canvas.create_line(300, 0, 300, 1000)
+    canvas.create_line(325, 0, 325, 1000)
+    canvas.create_line(350, 0, 350, 1000)
+    canvas.create_line(375, 0, 375, 1000)
+    canvas.create_line(400, 0, 400, 1000)
+    canvas.create_line(425, 0, 425, 1000)
+    canvas.create_line(450, 0, 450, 1000)
+    canvas.create_line(475, 0, 475, 1000)
+    canvas.create_line(500, 0, 500, 1000)
+    canvas.create_line(525, 0, 525, 1000)
+    canvas.create_line(550, 0, 550, 1000)
+    canvas.create_line(575, 0, 575, 1000)
+    canvas.create_line(600, 0, 600, 1000)
+    canvas.create_line(625, 0, 625, 1000)
+    canvas.create_line(650, 0, 650, 1000)
+    canvas.create_line(675, 0, 675, 1000)
+    canvas.create_line(700, 0, 700, 1000)
+    canvas.create_line(725, 0, 725, 1000)
+    canvas.create_line(750, 0, 750, 1000)
+    canvas.create_line(775, 0, 775, 1000)
+    canvas.create_line(800, 0, 800, 1000)
+    canvas.create_line(825, 0, 825, 1000)
+    canvas.create_line(850, 0, 850, 1000)
+    canvas.create_line(875, 0, 875, 1000)
+    canvas.create_line(900, 0, 900, 1000)
+    canvas.create_line(925, 0, 925, 1000)
+    canvas.create_line(950, 0, 950, 1000)
+    canvas.create_line(975, 0, 975, 1000)
+
+    canvas.pack()
+
+
+# this is the mouse tracking
+def left_click(self):
+    x = pyautogui.position()
+    messagebox.showinfo("coordinate found",x)
+    print(x)
+
+
+# this detects when the button 1/ left click is pressed
+root.bind("<Button-1>", left_click)
+
+grid(self=True)
+
+mainloop()
